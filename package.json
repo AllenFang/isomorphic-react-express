@@ -2,6 +2,10 @@
   "name": "isomorphic-react-express",
   "description": "It's a basic javascript isomorphic application with React and express",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AllenFang/isomorphic-react-express.git"
+  },
   "scripts": {
     "start": "DEBUG=isomorphic-react-express ./bin/www",
     "dev": "webpack --watch"
