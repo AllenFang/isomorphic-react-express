@@ -1,9 +1,9 @@
 {
-  "name": "expressiso",
-  "version": "0.0.0",
-  "private": true,
+  "name": "isomorphic-react-express",
+  "description": "It's a basic javascript isomorphic application with React and express",
+  "version": "0.1.0",
   "scripts": {
-    "start": "DEBUG=expressiso ./bin/www",
+    "start": "DEBUG=isomorphic-react-express ./bin/www",
     "dev": "webpack --watch"
   },
   "dependencies": {
