@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 
-class App extends React.Component{
+class Demo extends React.Component{
   render(){
     return(
       <Search />
@@ -9,4 +9,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default Demo;

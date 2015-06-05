@@ -3,15 +3,23 @@ It's a basic javascript isomorphic application with React and express
 
 ### Installation
 ```bash
-npm install
+$ npm install
 ```
-
-### Building with webpack
+## Fontend application demo
+### Building with Hot
 ```bash
-npm run dev
+$ npm run dev-hot
 ```
+Then open browser to http://localhost:8080/index.html
 
-### Running the app
+## Backend application demo(with Express)
+### Bundle application
 ```bash
-npm run start
+$ npm run dev
 ```
+Then open another terminal for start server
+### Running the server
+```bash
+$ npm run start
+```
+Go to http://localhost:3000

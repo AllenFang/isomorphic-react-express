@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 require("babel/register");
 var React = require("react");
-var App = React.createFactory(require("../public/javascripts/components/app"));
+var Demo = React.createFactory(require("../app/components/Demo"));
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  var markup = React.renderToString(App());
+  var markup = React.renderToString(Demo());
   res.render('index', {
     title: 'Express',
     markup: markup

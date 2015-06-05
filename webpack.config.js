@@ -1,20 +1,32 @@
 var path = require("path");
-
+var webpack = require('webpack');
+// 'webpack-dev-server/client?http://0.0.0.0:8080', 'webpack/hot/only-dev-server',
+var IS_HOT = process.env.NODE_ENV === 'hot';
+var entry = ["./app/main.js"];
+if(IS_HOT){
+  entry.unshift(
+  	"webpack-dev-server/client?http://localhost:8080",
+  	"webpack/hot/only-dev-server"
+  );
+}
 module.exports = [{
-  context: path.join(__dirname, "public", "javascripts"),
-  entry: "main",
+  entry: entry,
   output: {
-    path: path.join(__dirname, "public", "javascripts"),
+    publicPath: "http://localhost:8080/dist/",
+    path: "./public/javascripts",
     filename: "bundle.js"
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: "babel-loader"}
+      { test: /\.js$/, loaders: ["react-hot", "babel-loader"], include: path.join(__dirname, 'app'), exclude: /node_modules/}
     ]
   },
   resolve: {
     extensions: ["", ".js", ".jsx"],
     root: [path.join(__dirname, "public", "javascripts")],
     modulesDirectories: ["node_modules"]
-  }
+  },
+  plugins: [
+  	new webpack.NoErrorsPlugin()
+  ]
 }];
