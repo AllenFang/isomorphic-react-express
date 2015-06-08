@@ -5,20 +5,21 @@ It's a basic javascript isomorphic application with React and express
 ```bash
 $ npm install
 ```
-## Fontend application demo
-### Building with Hot
+## Client side demo
+#### Building with Hot
 ```bash
 $ npm run dev-hot
 ```
 Then open browser to http://localhost:8080/index.html
 
-## Backend application demo(with Express)
-### Bundle application
+
+## Server side demo
+#### Bundle application
 ```bash
 $ npm run dev
 ```
-Then open another terminal for start server
-### Running the server
+Then open another terminal for start server(Express)
+#### Running the server
 ```bash
 $ npm run start
 ```
